@@ -5,8 +5,8 @@ import { Settings } from '../models/Settings';
 export class SettingsService {
   settings: Settings = {
     allowRegistration: true,
-    disableBalanceOnAdd: true,
-    disableBalanceOnEdit: true,
+    disableSalaryOnAdd: true,
+    disableSalaryOnEdit: true,
   }
 
   constructor() {

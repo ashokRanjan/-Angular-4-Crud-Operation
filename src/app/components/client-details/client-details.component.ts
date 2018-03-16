@@ -12,8 +12,8 @@ import { Client } from '../../models/Client';
 export class ClientDetailsComponent implements OnInit {
   id: string;
   client: Client;
-  hasBalance: boolean = false;
-  showBalanceUpdaateInput: boolean = false;
+  hasSalary: boolean = false;
+  showSalaryUpdaateInput: boolean = false;
 
   constructor(
     public clientService:ClientService,
@@ -29,18 +29,18 @@ export class ClientDetailsComponent implements OnInit {
 
     // Get client
     this.clientService.getClient(this.id).subscribe(client => {
-      if( client.balance > 0){
-        this.hasBalance = true;
+      if( client.salary > 0){
+        this.hasSalary = true;
       }
       this.client = client;
       console.log(this.client);
     });
   }
 
-  updateBalance(id: string){
+  updateSalary(id: string){
     // update client
     this.clientService.updateClient(this.id, this.client);
-    this.flashMessagesServices.show('Balance Updated', { cssClass: 'alert-success', timeout: 4000});
+    this.flashMessagesServices.show('Salary Updated', { cssClass: 'alert-success', timeout: 4000});
     this.router.navigate(['/client/' + this.id]);
   }
 

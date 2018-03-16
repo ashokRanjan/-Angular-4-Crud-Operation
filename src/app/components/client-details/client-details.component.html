@@ -19,20 +19,7 @@
         <h4><strong>Client ID:</strong> {{client.$key}}</h4>
       </div>
       <div class="col-md-4">
-        <!-- <h3 class="pull-right">
-          Balance:
-          <span
-            [class.text-danger]="hasBalance"
-            [class.text-sucess]="!hasBalance"
-          >
-            {{ client.balance | currency:"USD": true }}
-          </span>
-          <small> 
-            <a (click)="showBalanceUpdateInput = !showBalanceUpdateInput">
-              <i class="fa fa-pencil"></i>
-            </a>
-          </small>
-        </h3> -->
+       
         <div class="clearfix">
           <form 
             *ngIf="showBalanceUpdateInput"
@@ -42,8 +29,8 @@
                 <input 
                   type="text" 
                   class="form-control" 
-                  [(ngModel)]="client.balance" 
-                  name="balance"
+                  [(ngModel)]="client.Balance" 
+                  name="Balance"
                 >
               </div>
               <button type="submit" class="btn btn-primary">Update</button>
@@ -52,8 +39,7 @@
       </div>
     </div>
     <ul class="list-group">
-     <!-- <li class="list-group-item"><strong>Email:</strong> {{client.email}}</li>
-      <li class="list-group-item"><strong>Phone:</strong> {{client.phone}}</li> -->
+     
 	  
 	  <li class="list-group-item"><strong>First Name :</strong> {{client.firstName}}</li>
       <li class="list-group-item"><strong>Last Name :</strong> {{client.lastName}}</li>

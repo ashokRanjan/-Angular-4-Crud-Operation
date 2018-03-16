@@ -25,7 +25,7 @@ export class ClientsComponent implements OnInit {
   getTotalOwed(){
     let total = 0;
     for(let i = 0;i < this.clients.length;i++){
-      total += parseFloat(this.clients[i].balance);
+      total += parseFloat(this.clients[i].salary);
     }
     this.totalOwed = total;
     console.log(this.totalOwed);

@@ -16,10 +16,10 @@ export class AddClientComponent implements OnInit {
     lastName: '',
     email: '',
     phone: '',
-    balance: 0 
+    salary: 0 
   }
 
-  disableBalanceOnAdd: boolean = false;
+  disableSalaryOnAdd: boolean = false;
   constructor(
     public flashMessagesService: FlashMessagesService,
     public router: Router,
@@ -28,12 +28,12 @@ export class AddClientComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.disableBalanceOnAdd = this.settingService.getSettings().disableBalanceOnAdd;
+    this.disableSalaryOnAdd = this.settingService.getSettings().disableSalaryOnAdd;
   }
 
   onSubmit({value, valid}: {value: Client, valid: boolean}){
-    if(this.disableBalanceOnAdd){
-      value.balance = 0;
+    if(this.disableSalaryOnAdd){
+      value.salary = 0;
     }
 
     if (!valid) {

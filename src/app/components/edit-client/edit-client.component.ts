@@ -16,10 +16,10 @@ export class EditClientComponent implements OnInit {
     lastName: '',
     email: '',
     phone: '',
-    balance: 0
+    salary: 0
   };
 
-  disableBalanceOnEdit: boolean = true;
+  disableSalaryOnEdit: boolean = true;
 
   constructor(
     public clientService: ClientService,
@@ -38,7 +38,7 @@ export class EditClientComponent implements OnInit {
       this.client = client;
     });
 
-    this.disableBalanceOnEdit = this.settingsService.getSettings().disableBalanceOnEdit;
+    this.disableSalaryOnEdit = this.settingsService.getSettings().disableSalaryOnEdit;
   }
 
   onSubmit({value, valid}: {value: Client, valid: boolean}){
