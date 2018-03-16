@@ -40,11 +40,12 @@ const appRoutes: Routes = [
 ];
 // Firebase Configuration
 export const firebaseConfig = {
-    apiKey: 'AIzaSyAWuiFVp7Cm-NhksrxcRAwV3ZX4h0NxX2Q',
-    authDomain: 'https://client-panel-15a04.firebaseio.com/',
-    databaseURL: 'https://client-panel-15a04.firebaseio.com',
-    storageBucket: 'client-panel-15a04.appspot.com',
-    messagingSenderId: '109104448244'
+  apiKey: "AIzaSyCYxuFWThQW-CENejOrzSpvSn5051COgRY",
+  authDomain: "first-project-914bc.firebaseapp.com",
+  databaseURL: "https://first-project-914bc.firebaseio.com",
+  projectId: "first-project-914bc",
+  storageBucket: "",
+  messagingSenderId: "187509914612"
 };
 
 @NgModule({
